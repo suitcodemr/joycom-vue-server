@@ -1,0 +1,22 @@
+{
+	"name": "mernga-anwendung",
+	"version": "1.0.0",
+	"description": "Soziale Webanwendung",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"serve": "nodemon server.js"
+	},
+	"dependencies": {
+		"apollo-server-express": "^2.9.15",
+		"bcryptjs": "^2.4.3",
+		"express": "^4.17.1",
+		"graphql": "^14.5.8",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.8.6"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	},
+	"author": "Mirko Roßbach"
+}
