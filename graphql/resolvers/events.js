@@ -4,7 +4,7 @@ const Category = require('../../models/Category');
 const {
 	UserInputError,
 	AuthenticationError
-} = require('apollo-server-express');
+} = require('apollo-server');
 
 const checkAuth = require('../../util/check-auth');
 const { validateEventInput } = require('../../util/validators');
