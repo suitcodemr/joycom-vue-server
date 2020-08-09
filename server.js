@@ -11,14 +11,14 @@ const resolvers = require('./graphql/resolvers/resolvers');
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
-	context: req => req
+	context: (req) => req,
 });
 
 // Verbindung zur mongoDB herstellen
 mongoose
 	.connect(MONGODB, {
 		useNewUrlParser: true,
-		useUnifiedTopology: true
+		useUnifiedTopology: true,
 	})
 	.then(() => {
 		console.log('Der Server ist mit MongoDB verbunden!');
@@ -26,6 +26,6 @@ mongoose
 			console.log('Server wurde mit folgendem Port gestartet:', PORT)
 		);
 	})
-	.catch(err => {
+	.catch((err) => {
 		console.log(err);
 	});

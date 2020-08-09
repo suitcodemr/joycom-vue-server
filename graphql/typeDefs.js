@@ -6,7 +6,6 @@ module.exports = gql`
 		username: String!
 		email: String!
 		password: String!
-		avatar: String!
 		token: String!
 		createdAt: String!
 		updatedAt: String!
@@ -16,7 +15,6 @@ module.exports = gql`
 		email: String!
 		password: String!
 		confirmPassword: String!
-		avatar: String!
 	}
 	type Category {
 		_id: ID!

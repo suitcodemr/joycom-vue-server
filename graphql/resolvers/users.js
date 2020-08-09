@@ -16,7 +16,6 @@ const generateToken = user => {
 			_id: user._id,
 			email: user.email,
 			username: user.username,
-			avatar: user.avatar
 		},
 		SECRET_KEY,
 		{ expiresIn: '1h' }
@@ -94,7 +93,7 @@ module.exports = {
 
 		async register(
 			_,
-			{ registerInput: { username, email, password, confirmPassword, avatar } }
+			{ registerInput: { username, email, password, confirmPassword } }
 		) {
 			const { valid, errors } = validateRegisterInput(
 				username,
@@ -117,8 +116,7 @@ module.exports = {
 			const newUser = new User({
 				username,
 				email,
-				password,
-				avatar
+				password
 			});
 			const result = await newUser.save();
 			const token = generateToken(result);
