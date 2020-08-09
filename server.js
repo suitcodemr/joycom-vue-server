@@ -2,6 +2,8 @@
 const { ApolloServer } = require('apollo-server');
 const mongoose = require('mongoose');
 
+// Test Comment
+
 // Server-Variablen
 const { MONGODB, PORT } = require('./config');
 const typeDefs = require('./graphql/typeDefs');
